@@ -1,18 +1,18 @@
-# 🤖 SQLite Multi-Agent Chatbot System
+# Database Multi Agent Assistant
 
 An advanced **LLM-powered multi-agent system** that queries SQLite databases using natural language. This project integrates **grounding techniques**, **secure prompt engineering**, and **database connectivity** to provide a professional and safe interface for database interaction.
 
 ---
 
-## 🎯 Project Purpose
+## Project Purpose
 
 This system allows users to query an SQLite database using **natural language** without requiring any SQL knowledge. It delivers accurate, grounded, and secure responses through a **multi-agent architecture** and **Google Gemini API**.
 
 ---
 
-## 🏗️ Multi-Agent Architecture
+## Multi-Agent Architecture
 
-### 🔥 **Agent Roles**
+###  **Agent Roles**
 
 - **SQL Agent**: Converts user questions into **safe and valid** SQL queries using structured output.
 - **Natural Language Agent**: Converts JSON database results into user-friendly natural language responses.
@@ -20,7 +20,7 @@ This system allows users to query an SQLite database using **natural language** 
 
 ---
 
-## 🎯 Grounding Techniques
+## Grounding Techniques
 
 This system employs multiple grounding strategies to ensure accurate and secure outputs:
 
@@ -39,6 +39,27 @@ This system employs multiple grounding strategies to ensure accurate and secure 
 {
   "sql_query": "SELECT SupplierName FROM Suppliers WHERE SupplierID = (SELECT SupplierID FROM Products ORDER BY Price DESC LIMIT 1);",
   "explanation": "Finds the supplier of the highest-priced product."
+}
+sql_generation_config = {
+  "temperature": 0.1,   
+  "top_p": 0.95,
+  "top_k": 64,
+  "max_output_tokens": 8192,
+  "response_mime_type": "application/json",
+  "response_schema": {
+    "type": "object",
+    "properties": {
+      "sql_query": {
+        "type": "string",
+        "description": "Valid SQLite SELECT query"
+      },
+      "explanation": {
+        "type": "string",
+        "description": "Brief explanation of what the query does"
+      }
+    },
+    "required": ["sql_query"]
+  }
 }
 ```
 
@@ -74,9 +95,9 @@ database_schema = """
 
 ---
 
-## 🛡️ Security Techniques
+## Security Techniques
 
-### 🔐 **Layered Security Approach**
+### **Layered Security Approach**
 
 1. **Input Sanitization**
 
@@ -99,7 +120,7 @@ database_schema = """
 
 ---
 
-## 🎨 Interface and Application
+## Interface and Application
 
 ### **Gradio Web Interface**
 
@@ -122,11 +143,11 @@ User Query → Orchestrator Agent → SQL Agent (Structured Output)
 
 ## 📋 Core Features
 
-- ✅ **Natural Language → SQL Translation** (Turkish & English)
-- ✅ **Structured Output** for safe and parseable queries
-- ✅ **Context-Aware Querying** via prompt engineering
-- ✅ **Automatic CSV Export**
-- ✅ **Secure & Grounded Responses**
+- **Natural Language → SQL Translation** (Turkish & English)
+- **Structured Output** for safe and parseable queries
+- **Context-Aware Querying** via prompt engineering
+- **Automatic CSV Export**
+- **Secure & Grounded Responses**
 
 ---
 
@@ -175,16 +196,14 @@ python chat_bot.py
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ├── chat_bot.py            # Main application
-├── homework2.py           # Retry logic and API handling
-├── .env                   # API keys and DB config
-├── query_results/         # Auto-generated CSV files
+├── calculate_cost.py           # Retry logic and API handling
+├── .env                   # API keys and DB config   
 └── README.md             # Documentation
 ```
-
 ---
 
 ## 🌟 Why This Project is Unique?
@@ -193,14 +212,4 @@ python chat_bot.py
 - 🛡️ Implements **state-of-the-art security techniques**
 - 🎯 Uses **Structured Output + Context Injection** for reliable responses
 - 📊 Provides **automatic CSV export** and analytics
-
----
-
-## 📜 License
-
-MIT License - See [LICENSE](LICENSE) for details.
-
----
-
-**🔥 This project is a practical implementation of LLM grounding techniques and security best practices!**
 
