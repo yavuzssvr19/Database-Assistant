@@ -119,6 +119,21 @@ database_schema = """
    - Errors are handled gracefully with user-friendly messages.
 
 ---
+## 🔄 Rate Limit Handling & Retry Logic
+
+To manage API rate-limits and ensure high availability, the system includes **automatic retry** and **token usage monitoring**:
+
+- **`api_request_with_retry`** function catches HTTP `429` (rate limit) errors and retries with **exponential backoff**.
+
+- **Token tracking**:
+  - **`count_tokens`** and **`get_token_usage`** monitor prompt and response tokens.
+  - Global thresholds (`MAX_TOKENS`, `CONTEXT_WINDOW`, `WARNING_THRESHOLD`) trigger warnings if limits are approached.
+
+### Example Screenshot of Rate Limit Error Handling
+
+![API REQUEST ERROR](API REQUEST ERROR.jpg)
+
+---
 
 ## Interface and Application
 
