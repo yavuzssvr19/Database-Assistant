@@ -119,7 +119,7 @@ database_schema = """
    - Errors are handled gracefully with user-friendly messages.
 
 ---
-## 🔄 Rate Limit Handling & Retry Logic
+## Rate Limit Handling & Retry Logic
 
 To manage API rate-limits and ensure high availability, the system includes **automatic retry** and **token usage monitoring**:
 
@@ -146,7 +146,7 @@ To manage API rate-limits and ensure high availability, the system includes **au
 
 ---
 
-## 🚀 Workflow
+## Workflow
 
 ```
 User Query → Orchestrator Agent → SQL Agent (Structured Output)
@@ -156,7 +156,7 @@ User Query → Orchestrator Agent → SQL Agent (Structured Output)
 
 ---
 
-## 📋 Core Features
+## Core Features
 
 - **Natural Language → SQL Translation** (Turkish & English)
 - **Structured Output** for safe and parseable queries
@@ -166,7 +166,7 @@ User Query → Orchestrator Agent → SQL Agent (Structured Output)
 
 ---
 
-## 🛠️ Installation and Usage
+## Installation and Usage
 
 ### **Requirements**
 
@@ -190,19 +190,19 @@ python chat_bot.py
 
 ---
 
-## 💡 Example Usage
+## Example Usage
 
 ```
-👤 Who is the supplier of the highest priced product?
-🤖 The highest priced product is Côte de Blaye, and its supplier is Aux joyeux ecclésiastiques.
+Who is the supplier of the highest priced product?
+The highest priced product is Côte de Blaye, and its supplier is Aux joyeux ecclésiastiques.
 
-👤 Show all products in the 'Beverages' category.
-🤖 Here are all products in the Beverages category: Chai, Chang, Guaraná Fantástica...
+Show all products in the 'Beverages' category.
+Here are all products in the Beverages category: Chai, Chang, Guaraná Fantástica...
 ```
 
 ---
 
-## 📊 Technical Details
+## Technical Details
 
 - **LLM**: Google Gemini 2.5 Pro (Structured Output + Context Injection)
 - **Database**: SQLite with schema-level validation
@@ -221,10 +221,10 @@ python chat_bot.py
 ```
 ---
 
-## 🌟 Why This Project is Unique?
+##  Why This Project is Unique?
 
-- 🔥 Combines **Multi-Agent LLM Architecture** with **real database grounding**
-- 🛡️ Implements **state-of-the-art security techniques**
-- 🎯 Uses **Structured Output + Context Injection** for reliable responses
-- 📊 Provides **automatic CSV export** and analytics
+- Combines **Multi-Agent LLM Architecture** with **real database grounding**
+- Implements **state-of-the-art security techniques**
+- Uses **Structured Output + Context Injection** for reliable responses
+- Provides **automatic CSV export** and analytics
 
