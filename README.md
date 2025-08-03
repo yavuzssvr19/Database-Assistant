@@ -1,4 +1,4 @@
-# Database Multi Agent Assistant
+# Database Assistant
 
 An advanced **LLM-powered multi-agent system** that queries SQLite databases using natural language. This project integrates **grounding techniques**, **secure prompt engineering**, and **database connectivity** to provide a professional and safe interface for database interaction. System support multi linugual prompts. you can easily test English&Turkish support for the system with chat_bot test prompt.txt .
 
