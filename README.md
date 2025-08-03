@@ -131,7 +131,7 @@ To manage API rate-limits and ensure high availability, the system includes **au
 
 ### Example Screenshot of Rate Limit Error Handling
 
-![API REQUEST ERROR](API REQUEST ERROR.jpg)
+![API REQUEST ERROR](API_REQUEST_ERROR.jpg)
 
 ---
 
