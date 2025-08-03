@@ -1,12 +1,9 @@
-İlk 5 en düşük fiyatlı ürünün, hangi kategoride yer aldığını ve o kategorideki toplam ürün sayısını hesapla.
+Example Prompts for testing the system(Also you can easily test English&Turkish Support of this System:
 
-Her müşterinin toplam sipariş tutarını hesapla; ardından bu tutara göre en üst 3 müşteriyi belirle ve müşteri isimlerini göster.
-
-1997 yılındaki tüm siparişleri göz önüne alarak, en yüksek sipariş tutarına sahip müşterinin ismini ve toplam sipariş tutarını ver.
-Which product is the most ordered in each category? Display the corresponding category name, product name, and order quantity.
-
-
-Show all products in the 'Beverages' category.
-
-Show the total amount spent by each customer.
+1- İlk 5 en düşük fiyatlı ürünün, hangi kategoride yer aldığını ve o kategorideki toplam ürün sayısını hesapla.
+2- Her müşterinin toplam sipariş tutarını hesapla; ardından bu tutara göre en üst 3 müşteriyi belirle ve müşteri isimlerini göster.
+3- 1997 yılındaki tüm siparişleri göz önüne alarak, en yüksek sipariş tutarına sahip müşterinin ismini ve toplam sipariş tutarını ver.
+4- Which product is the most ordered in each category? Display the corresponding category name, product name, and order quantity.
+5- Show all products in the 'Beverages' category.
+6- Show the total amount spent by each customer.
 
