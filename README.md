@@ -1,6 +1,6 @@
 # 🤖 Database Assistant - Database Chatbot System
-![](demo_1.jpg)
-![](demo_2.jpg)
+![](demo_1.jpg) ![](demo_2.jpg)
+
 **Advanced LLM-powered multi-agent system** for querying SQLite databases using natural language - a professional web application. This project integrates **grounding techniques**, **secure prompt engineering**, and **database connectivity** to provide a safe and professional database interface. The system supports multilingual queries and can be tested in Turkish & English languages.
 
 ---
