@@ -1,0 +1,154 @@
+# ===================================
+# Database Chatbot Project .gitignore
+# ===================================
+
+# Environment Variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ===================================
+# Node.js Dependencies
+# ===================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# ===================================
+# Python Dependencies & Cache
+# ===================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# ===================================
+# Database & Query Results
+# ===================================
+# CSV query results (generated files)
+python-service/query_results/*.csv
+query_results/*.csv
+
+# Database backups
+*.db.bak
+*.sqlite.bak
+
+# ===================================
+# Frontend Build Files
+# ===================================
+frontend/build/
+frontend/dist/
+frontend/.pnp
+frontend/.pnp.js
+frontend/coverage/
+
+# ===================================
+# Backend Build Files
+# ===================================
+backend/build/
+backend/dist/
+
+# ===================================
+# IDE & Editor Files
+# ===================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ===================================
+# OS Generated Files
+# ===================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ===================================
+# Logs
+# ===================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ===================================
+# Temporary Files
+# ===================================
+*.tmp
+*.temp
+.cache/
+
+# ===================================
+# API Keys & Sensitive Data
+# ===================================
+# Make sure no API keys are committed
+*api_key*
+*secret*
+*token*
+credentials.json
+
+# ===================================
+# Testing
+# ===================================
+coverage/
+.nyc_output/
+.coverage
+htmlcov/
+
+# ===================================
+# Documentation Build
+# ===================================
+docs/_build/
+
+# ===================================
+# Keep Important Files
+# ===================================
+# Keep example environment file
+!env.example
+
+# Keep database schema/sample data
+!Northwind.db
+
+# Keep documentation
+!README.md
+!*.md
+
+# Keep essential config files
+!package.json
+!requirements.txt

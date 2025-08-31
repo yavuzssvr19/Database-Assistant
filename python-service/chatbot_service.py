@@ -515,11 +515,58 @@ def create_chat_interface():
 
     return app
 
-app = create_chat_interface()
-app.launch(prevent_thread_lock=True)
+class ChatbotService:
+    """
+    Service wrapper for the chatbot functionality to be used by Flask API
+    """
+    def __init__(self):
+        """Initialize the chatbot service"""
+        test_db_connection()
+        self.last_csv_path = None
+    
+    def process_message(self, message):
+        """
+        Process a user message and return the chatbot response
+        
+        Args:
+            message (str): User's input message
+            
+        Returns:
+            str: Chatbot's response
+        """
+        return chatbot(message)
+    
+    def has_csv_file(self):
+        """
+        Check if there's a CSV file available for download
+        
+        Returns:
+            bool: True if CSV file is available
+        """
+        return get_last_csv_file() is not None
+    
+    def get_last_csv_path(self):
+        """
+        Get the path to the last generated CSV file
+        
+        Returns:
+            str or None: Path to CSV file or None if not available
+        """
+        return get_last_csv_file()
 
-try:
-    while True:
-        pass
-except (KeyboardInterrupt, SystemExit):
-    on_close()
+# For Gradio interface (optional - can be run separately)
+def create_gradio_app():
+    """Create and return Gradio interface for standalone use"""
+    app = create_chat_interface()
+    return app
+
+# Only run Gradio interface if this file is executed directly
+if __name__ == "__main__":
+    app = create_chat_interface()
+    app.launch(prevent_thread_lock=True)
+
+    try:
+        while True:
+            pass
+    except (KeyboardInterrupt, SystemExit):
+        on_close()
